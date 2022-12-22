@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+   
+          <meta charset="UTF-8"/>
+          <meta name="viewport" content="width=device-width ,initial-scale=1.0" />
+          <title>convert</title>
+        
+        <style>
+             *{
+                box-sizing: border-box;
+            }
+
+            body{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            h1{
+                text-align: center;
+                font-family: cursive;
+            }
+            input,label{
+                display: block;
+                margin-bottom: 15px;
+            }
+            
+              
+           
+        
+        </style>
+        
+        
+        
+    </head>
+    
+    
+    <body>
+        
+        
+        <div id="app">
+            
+            <h1>convert</h1>
+            
+             <p>convert egyption pound  -->  soudi real  and  soudi real  --> egyption pound</p>
+            
+            <label>egyption pound :</label>
+            <input type="text" v-model="eg">
+            <label>soudi real:</label>
+            <input type="text" v-model="sar">
+            
+            
+            
+        </div>
+        
+        
+    
+    <!--  <script src="vue.js"></script>-->
+    <script src="https://unpkg.com/vue@2.6.11/dist/vue.js"></script>   
+        
+    <script>
+        
+        
+         var inst1 =  new Vue(
+       {
+            el:"#app",
+            
+            data:{
+                
+                eg:0,
+                sar:0,
+                 
+            },
+           methods :{
+               
+              
+                 
+             }, 
+           
+           watch: {
+               
+                
+                
+                
+                eg : function(v){
+                    this.sar =v /5;
+                    console.log('eg run')
+                },
+                
+                sar : function(v){
+                    this.eg =v * 5;
+                    console.log('sar run')
+                    
+                },
+           }
+                
+                
+               
+           
+           
+            })
+        
+    </script>
+     </body>
+</html>
